@@ -15,4 +15,9 @@ public class ControladorBotonSript : MonoBehaviour
     {
         
     }
+
+    void verga ()
+    {
+
+    }
 }
