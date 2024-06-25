@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class MainControlerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void DeactivateAll()
@@ -39,5 +40,10 @@ public class MainControlerScript : MonoBehaviour
 
         int random2 = Random.Range(0, productos2.Length);
         productos2[random2].SetActive(true);
+    }
+
+    void MostrarPrecio() 
+    {
+
     }
 }
