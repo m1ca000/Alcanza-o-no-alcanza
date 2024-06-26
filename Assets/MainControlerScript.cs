@@ -11,11 +11,16 @@ public class MainControlerScript : MonoBehaviour
     public int currentIndex = -1;
     public Text precio1;
     public Text precio2;
+    int precioTotal;
+    int plataQueSeTiene;
+    public Text plata;
     // Start is called before the first frame update
     void Start()
     {
         DeactivateAll();
         ActivaRandom();
+        Plata();
+        
     }
 
     // Update is called once per frame
@@ -49,5 +54,50 @@ public class MainControlerScript : MonoBehaviour
         ProductoScript producto2;
         producto2 = productos2[random2].GetComponent<ProductoScript>();
         precio2.text = producto2.precio.ToString();
+
+
+
+        producto1 = productos1[random].GetComponent<ProductoScript>();
+        producto2 = productos2[random2].GetComponent<ProductoScript>();
+        precioTotal = producto1.precio + producto2.precio;
+    }
+
+    void Plata()
+    {
+        plataQueSeTiene = Random.Range(150, 100000);
+        plata.text = "Plata: " + plataQueSeTiene;
+    }
+    public void AlcanzaYSobra()
+    {
+        if (precioTotal < plataQueSeTiene)
+        {
+            Debug.Log("Bien hacho!! Es correcto");
+        }
+        else
+        {
+            Debug.Log("No es correcto, mejor suerte la proxima");
+        }
+    }
+    public void Alcanzajusto()
+    {
+        if (precioTotal == plataQueSeTiene)
+        {
+            Debug.Log("Bien hacho!! Es correcto");
+        }
+        else
+        {
+            Debug.Log("No es correcto, mejor suerte la proxima");
+        }
+    }
+    public void NoAlcanza()
+    {
+        if (precioTotal > plataQueSeTiene)
+        {
+            Debug.Log("Bien hacho!! Es correcto");
+        }
+        else
+        {
+            Debug.Log("No es correcto, mejor suerte la proxima");
+        }
     }
 }
