@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
+using UnityEngine.Internal.Experimental.UIElements;
 using UnityEngine.UI;
 
 public class MainControlerScript : MonoBehaviour
@@ -14,6 +16,8 @@ public class MainControlerScript : MonoBehaviour
     int precioTotal;
     int plataQueSeTiene;
     public Text plata;
+    public Text resultado;
+    public GameObject notificacion;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +43,8 @@ public class MainControlerScript : MonoBehaviour
         {
             productos2[i].SetActive(false);
         }
+        notificacion.SetActive(false);
+
     }
 
     void ActivaRandom()
@@ -69,35 +75,46 @@ public class MainControlerScript : MonoBehaviour
     }
     public void AlcanzaYSobra()
     {
+        notificacion.SetActive(true);
         if (precioTotal < plataQueSeTiene)
         {
-            Debug.Log("Bien hacho!! Es correcto");
+            resultado.text = "Bien hacho!! Es correcto";
         }
         else
         {
-            Debug.Log("No es correcto, mejor suerte la proxima");
+            resultado.text = "No es correcto, mejor suerte la proxima";
         }
     }
     public void Alcanzajusto()
     {
+        notificacion.SetActive(true);
         if (precioTotal == plataQueSeTiene)
         {
-            Debug.Log("Bien hacho!! Es correcto");
+            resultado.text = "Bien hacho!! Es correcto";
         }
         else
         {
-            Debug.Log("No es correcto, mejor suerte la proxima");
+            resultado.text = "No es correcto, mejor suerte la proxima";
         }
     }
     public void NoAlcanza()
     {
+        notificacion.SetActive(true);
         if (precioTotal > plataQueSeTiene)
         {
-            Debug.Log("Bien hacho!! Es correcto");
+            resultado.text = "Bien hacho!! Es correcto";
         }
         else
         {
-            Debug.Log("No es correcto, mejor suerte la proxima");
+            resultado.text = "No es correcto, mejor suerte la proxima";
         }
     }
+
+    void mostrarPanel()
+    {
+        DeactivateAll();
+        notificacion.SetActive(true);
+        
+    }
+
 }
