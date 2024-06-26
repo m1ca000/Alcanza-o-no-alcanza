@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 11817274}
   - component: {fileID: 11817273}
   m_Layer: 5
-  m_Name: Txt-Precio1
+  m_Name: Txt-Precio2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 0
+  precio: 700
   objeto1: 0
 --- !u!1001 &388652426
 PrefabInstance:
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 100
+  precio: 500
   objeto1: 0
 --- !u!1001 &484781556
 PrefabInstance:
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 50
+  precio: 500
   objeto1: 1
 --- !u!1001 &622284261
 PrefabInstance:
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 0
+  precio: 700
   objeto1: 1
 --- !u!1 &854924516
 GameObject:
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 0
+  precio: 300
   objeto1: 1
 --- !u!1 &1156157725
 GameObject:
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 0
+  precio: 1000
   objeto1: 0
 --- !u!1 &1641598726
 GameObject:
@@ -2080,7 +2080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 0
+  precio: 300
   objeto1: 0
 --- !u!1001 &1700498075
 PrefabInstance:
@@ -2161,7 +2161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded911303ef78c429a1e76a4f00ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 0
+  precio: 1000
   objeto1: 1
 --- !u!1 &1862837837
 GameObject:
@@ -2203,6 +2203,8 @@ MonoBehaviour:
   - {fileID: 370934140}
   - {fileID: 1640953220}
   currentIndex: -1
+  precio1: {fileID: 1074150441}
+  precio2: {fileID: 11817273}
 --- !u!4 &1862837839
 Transform:
   m_ObjectHideFlags: 0
