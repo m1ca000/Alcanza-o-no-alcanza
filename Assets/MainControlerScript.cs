@@ -70,7 +70,7 @@ public class MainControlerScript : MonoBehaviour
 
     void Plata()
     {
-        plataQueSeTiene = Random.Range(150, 100000);
+        plataQueSeTiene = Random.Range(150, 1050);
         plata.text = "Plata: " + plataQueSeTiene;
     }
     public void AlcanzaYSobra()
