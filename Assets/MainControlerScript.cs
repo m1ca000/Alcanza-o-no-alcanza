@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.Internal.Experimental.UIElements;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainControlerScript : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class MainControlerScript : MonoBehaviour
     public Text plata;
     public Text resultado;
     public GameObject notificacion;
+    public Text textoBoton;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,10 +81,12 @@ public class MainControlerScript : MonoBehaviour
         if (precioTotal < plataQueSeTiene)
         {
             resultado.text = "Bien hacho!! Es correcto";
+            textoBoton.text = "Reiniciar el desafio"; 
         }
         else
         {
             resultado.text = "No es correcto, mejor suerte la proxima";
+            textoBoton.text = "Volver a jugar";
         }
     }
     public void Alcanzajusto()
@@ -91,10 +95,12 @@ public class MainControlerScript : MonoBehaviour
         if (precioTotal == plataQueSeTiene)
         {
             resultado.text = "Bien hacho!! Es correcto";
+            textoBoton.text = "Reiniciar el desafio";
         }
         else
         {
             resultado.text = "No es correcto, mejor suerte la proxima";
+            textoBoton.text = "Volver a intentarlo";
         }
     }
     public void NoAlcanza()
@@ -103,10 +109,12 @@ public class MainControlerScript : MonoBehaviour
         if (precioTotal > plataQueSeTiene)
         {
             resultado.text = "Bien hacho!! Es correcto";
+            textoBoton.text = "Reiniciar el desafio";
         }
         else
         {
             resultado.text = "No es correcto, mejor suerte la proxima";
+            textoBoton.text = "Volver a intentarlo";
         }
     }
 
@@ -115,6 +123,29 @@ public class MainControlerScript : MonoBehaviour
         DeactivateAll();
         notificacion.SetActive(true);
         
+    }
+
+    public void VolverAIntentar()
+    {
+        if (textoBoton.text == "Volver a intentarlo")
+        {
+            notificacion.SetActive(false);
+
+        }
+        else
+        {
+            Start();
+        }
+        
+    }
+
+    public void Reiniciar()
+    {
+    }
+
+    public void Salir()
+    {
+        SceneManager.LoadScene("SeleccionarJuegos");
     }
 
 }
